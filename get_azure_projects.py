@@ -39,6 +39,13 @@ for collection in collections:
         project['Collection'] = collection  # Add collection name for identification
     all_projects.extend(projects)
 
-# Convert to DataFrame and save to Excel
-df = pd.DataFrame(all_projects)
-df.to_excel('azure_devops_projects.xlsx', index=False)
+from datetime import datetime
+# Current timestamp
+timestamp = datetime.now().strftime('%Y%m%d-%H%M%S')
+
+# Filenames with timestamp
+projects_filename = f'azure_devops_projects_{timestamp}.xlsx'
+
+# Convert to DataFrame and save to Excel with timestamped filenames
+df_projects = pd.DataFrame(all_projects)
+df_projects.to_excel(projects_filename, index=False)
