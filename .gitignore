@@ -1,0 +1,11 @@
+# Python virtual environments
+venv/
+env/
+
+# Excel files
+*.xlsx
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
