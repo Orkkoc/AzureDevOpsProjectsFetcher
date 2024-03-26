@@ -49,3 +49,5 @@ projects_filename = f'azure_devops_projects_{timestamp}.xlsx'
 # Convert to DataFrame and save to Excel with timestamped filenames
 df_projects = pd.DataFrame(all_projects)
 df_projects.to_excel(projects_filename, index=False)
+
+print(f"Data exported to {projects_filename}")
